@@ -1,5 +1,6 @@
-import express from 'express';
-import { booksController, authorsController } from '../controllers';
+const express = require('express');
+const booksController = require('../controllers/BooksController');
+const authorsController = require('../controllers/AuthorsController');
 
 const router = express.Router();
 
@@ -13,4 +14,4 @@ router.post('/books', booksController.create);
 router.put('/books/:id', booksController.update);
 router.delete('/books/:id', booksController.delete);
 
-export default router;
+module.exports = router;
