@@ -112,7 +112,7 @@ function App() {
       const authorBookCount = new Map();
 
       for (const book of books) {
-        const authorName = book.author.name;
+        const authorName = book.name;
 
         if (authorBookCount.has(authorName)) {
           authorBookCount.set(authorName, authorBookCount.get(authorName) + 1);

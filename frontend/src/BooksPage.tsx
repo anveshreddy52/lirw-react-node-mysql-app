@@ -273,7 +273,7 @@ function BooksPage() {
           releaseDate: book.releaseDate,
           description: book.description,
           pages: book.pages,
-          author: book?.author?.name,
+          author: book?.name,
           createdAt: book.createdAt,
           updatedAt: book.updatedAt,
           actions: (
@@ -328,13 +328,13 @@ function BooksPage() {
       </main>
       <AddEditBookModal
         authors={authors}
-        initialValues={activeBook && { ...activeBook, author: activeBook?.author?.id }}
+        initialValues={activeBook && { ...activeBook, author: activeBook?.authorId }}
         isEdit={isEdit}
         isModalOpen={isAddEditModalOpen}
         setIsModalOpen={setIsAddEditModalOpen}
         onOk={bookAddEdit}
       />
-      <ViewBookModal book={activeBook && { ...activeBook, author: activeBook?.author?.name }} isModalOpen={isViewModalOpen} setIsModalOpen={setIsViewModalOpen} />
+      <ViewBookModal book={activeBook && { ...activeBook, author: activeBook?.name }} isModalOpen={isViewModalOpen} setIsModalOpen={setIsViewModalOpen} />
       <DeleteBookModal book={activeBook} isModalOpen={isDeleteModalOpen} setIsModalOpen={setIsDeleteModalOpen} onOk={bookDelete} />
     </div>
   )

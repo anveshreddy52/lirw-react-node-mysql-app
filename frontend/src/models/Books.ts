@@ -1,5 +1,3 @@
-import { Author } from "./Author";
-
 export interface Book {
     id: number;
     title: string;
@@ -8,7 +6,10 @@ export interface Book {
     pages: number;
     createdAt: string;
     updatedAt: string;
-    author: Author
+    authorId: number;
+    name: string;
+    birthday: string;
+    bio: string;
 }
 
 export interface BookDTO {
